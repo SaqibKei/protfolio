@@ -233,6 +233,9 @@ footer {
 
 
 @media screen and (max-width: 644px) {
+    :root {
+        font-size: 5px;
+    }
     header .logo {
         text-align: center;
     }
