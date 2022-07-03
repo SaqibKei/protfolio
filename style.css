@@ -1,0 +1,247 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: monospace;
+}
+
+:root {
+    --ft-size: 10px;
+    --bg-color: #FFFFFF;
+    --ft-color: #000000;
+    font-size: var(--ft-size);
+    font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
+    color: var(--ft-color);
+    user-select: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+a {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* header styling */
+
+header {
+    box-shadow: 0 .5rem .5rem #00000010;
+    background: #FFFFFF;
+    min-height: fit-content;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 4rem;
+    letter-spacing: .2rem;
+    padding: 1rem .5rem;
+}
+
+.logo,
+nav {
+    flex-grow: 1;
+}
+
+header .logo {
+    color: var(--ft-color);
+    text-transform: uppercase;
+    overflow: hidden;
+    height: 2.5rem;
+    font-size: 3rem;
+    margin: .5rem 0;
+}
+
+header nav {
+    align-self: center;
+    display: flex;
+}
+
+header nav a {
+    flex-grow: 1;
+    padding: 1rem 3rem;
+    color: var(--ft-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 100vmax;
+    display: grid;
+    place-items: center;
+}
+
+header nav a:hover {
+    text-decoration: underline .3rem;
+    text-underline-offset: .5rem;
+}
+
+header nav a.active {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+/* main body styling */
+main {
+    width: 100vw;
+}
+
+/* section 1 */
+
+main .Profession {
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+}
+
+main .Profession p {
+    align-self: flex-end;
+    color: var(--ft-color);
+    font-size: 3.5rem;
+    margin: 0 1rem;
+}
+
+main .Profession a {
+    align-self: flex-start;
+    color: var(--ft-color);
+    border: .2rem solid #000000;
+    border-radius: 100vmax;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    animation-name: inout;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+main .Profession a:hover {
+    text-decoration: underline .1rem;
+    text-underline-offset: .5rem;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+@keyframes inout {
+    to {
+        box-shadow: 0 0 .5rem .5rem #00000015;
+    }
+}
+
+/* section 2 */
+.intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    padding-inline: 5rem;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.left,
+.right {
+    align-self: center;
+}
+
+.left p {
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+}
+
+.right img {
+    width: 100%;
+}
+
+.first1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.second1 {
+    margin-block: 2rem;
+    font-size: 5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+.btnholder {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 50%;
+}
+
+.left .btn1,
+.left .btn2 {
+    text-align: center;
+    flex-grow: 1;
+    text-transform: capitalize;
+    color: #000000;
+    border: .2rem solid black;
+    padding: 1rem 2rem;
+    border-radius: 100vmax;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.left :is(.btn1, .btn2):hover {
+    background: #000000;
+    color: #FFF;
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+}
+
+
+/* footer styling */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #00000030;
+    padding-block: 2rem;
+    width: 100vw;
+}
+
+.footertext {
+    color: var(--ft-color);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.social-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+
+@media screen and (max-width: 644px) {
+    header .logo {
+        text-align: center;
+    }
+
+    .right img {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        place-items: center;
+    }
+
+}
