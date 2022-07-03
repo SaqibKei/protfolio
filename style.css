@@ -56,7 +56,7 @@ header .logo {
     overflow: hidden;
     height: 2.5rem;
     font-size: 3rem;
-    margin: .5rem 0;
+    margin: .5rem 0 .5rem 1rem;
 }
 
 header nav {
