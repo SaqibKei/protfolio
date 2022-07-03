@@ -233,9 +233,6 @@ footer {
 
 
 @media screen and (max-width: 644px) {
-    header .logo {
-        margin-left: 1rem;
-    }
     :root {
         font-size: 5px;
     }
